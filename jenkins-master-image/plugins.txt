@@ -1,0 +1,10 @@
+ssh-slaves
+git
+htmlpublisher
+greenballs
+simple-theme-plugin
+kubernetes
+rebuild
+email-ext
+emailext-template
+build-user-vars-plugin

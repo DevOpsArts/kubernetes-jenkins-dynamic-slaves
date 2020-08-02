@@ -1,0 +1,21 @@
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  labels:
+    app: "jenkins-master"
+    version: "latest"
+  name: "jenkins-master-service"
+  namespace: "jenkins"
+spec:
+  ports:
+  - name: "http"
+    port: 80
+    targetPort: 8080
+    nodePort: 30001
+  - name: "jnlp"
+    port: 50000
+    targetPort: 50000
+  selector:
+    app: "jenkins-master"
+    version: "latest"
+  type: "NodePort"
